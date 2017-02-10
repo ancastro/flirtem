@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @pickup_line.text %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @pickup_line.author %>
+</p>
+
+<%= link_to 'Edit', edit_pickup_line_path(@pickup_line) %> |
+<%= link_to 'Back', pickup_lines_path %>

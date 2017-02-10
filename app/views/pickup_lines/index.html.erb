@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pickup Lines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th>Author</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pickup_lines.each do |pickup_line| %>
+      <tr>
+        <td><%= pickup_line.text %></td>
+        <td><%= pickup_line.author %></td>
+        <td><%= link_to 'Show', pickup_line %></td>
+        <td><%= link_to 'Edit', edit_pickup_line_path(pickup_line) %></td>
+        <td><%= link_to 'Destroy', pickup_line, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pickup line', new_pickup_line_path %>
